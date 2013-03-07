@@ -19,6 +19,7 @@ public class HomePage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
 
+	@SuppressWarnings("serial")
 	public HomePage(final PageParameters parameters) {
 		super(parameters);
 
@@ -41,7 +42,7 @@ public class HomePage extends WebPage {
 		label.add(new AjaxSelfUpdatingTimerBehavior(Duration.seconds(5)));
 		add(label);
 
-		add(new Link("doNothing") {
+		add(new Link<Void>("doNothing") {
 
 			@Override
 			public void onClick() {
